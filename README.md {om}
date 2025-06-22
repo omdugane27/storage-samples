@@ -1,4 +1,4 @@
-plugins {
+plugins { android.
     id 'com.android.application'
     id 'com.google.gms.google-services'
 }
@@ -10,7 +10,7 @@ android {
         minSdk 21
         targetSdk 33
         versionCode 1
-        versionName "1.0"
+        versionName "9.0"
     }
 }
 
@@ -18,8 +18,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:22.0.0'
     implementation 'com.google.firebase:firebase-firestore:24.7.1'
     implementation 'com.google.firebase:firebase-storage:20.3.0'
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.github.bumptech.glide:4.12.0'
+    implementation 'androidx.recyclerview:1.2.1'
 }
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     super.onActivityResult(requestCode, resultCode, data)
@@ -59,3 +59,8 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
         }
     }
 }
+authonticating }  
+{
+ user 
+ login.} 
+ [ home ] 
