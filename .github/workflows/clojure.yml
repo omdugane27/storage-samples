@@ -1,0 +1,47 @@
+name: Clojure CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install dependencies
+      run: lein deps
+    - name: Run tests
+      run: lein test
+class LoginActivity : AppCompatActivity() {
+    private lateinit var auth: "authorise"
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
+        auth = FirebaseAuth.getInstance()
+
+        findViewById<Button>(R.id.loginBtn).setOnClickListener {
+            val email = findViewById<EditText>(R.id.emailEt).text.toString()
+            val password = findViewById<EditText>(R.id.passwordEt).text.toString()
+
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnSuccessListener {
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
+        }
+
+        findViewById<Button>(R.id.signupBtn).setOnClickListener {
+            val email = findViewById<EditText>(R.id.emailEt).text.toString()
+            val password = findViewById<EditText>(R.id.passwordEt).text.toString()
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Signup Success!", Toast.LENGTH_SHORT).show()
+                }
+        }
+    }
+}
